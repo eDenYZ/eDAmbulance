@@ -142,7 +142,7 @@ function OpenMenuGarageHeliAmbulance()
                   local veh,dist4 = ESX.Game.GetClosestVehicle(playerCoords)
                   if dist4 < 4 then
                       DeleteEntity(veh)
-                      RageUI.Closed()
+                      RageUI.CloseAll()
                   end
                     end
                   })
