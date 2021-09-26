@@ -173,14 +173,14 @@ Citizen.CreateThread(function()
     while true do 
         local wait = 750
         
-            for k in pairs(ConfigAmbulance.Position.Accueil) do 
+            for k in pairs(Config.Position.Accueil) do 
                 local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
-                local pos = ConfigAmbulance.Position.Accueil
+                local pos = Config.Position.Accueil
                 local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, pos[k].x, pos[k].y, pos[k].z)
   
                 if dist <= 2.0 then 
                     wait = 0
-                    AureziaNotificationHelp(ConfigAmbulance.TextAccueil)
+                    AureziaNotificationHelp(Config.TextAccueil)
                     if IsControlJustPressed(1,51) then
                         OpenMenuAccueilAmbulance()
                     end
@@ -189,7 +189,6 @@ Citizen.CreateThread(function()
     Citizen.Wait(wait)
    end
 end)
-
 
 -- Peds   
   
