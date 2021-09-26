@@ -180,7 +180,7 @@ Citizen.CreateThread(function()
   
                 if dist <= 2.0 then 
                     wait = 0
-                    AureziaNotificationHelp(Config.TextAccueil)
+                    Visual.Subtitle(Config.TextAccueil, 1)
                     if IsControlJustPressed(1,51) then
                         OpenMenuAccueilAmbulance()
                     end
