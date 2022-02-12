@@ -121,74 +121,74 @@ AmbuCloak = {
                 end
                 }
             },
-            grades = {
-                -- @label = Le nom affiché de la tenue de grade
-                -- @male = Les composants skinchanger pour les hommes
-                -- @female = Les composants skinchanger pour les femmes
-                [0] = {
-                    label = "Tenue d'Ambulancier",
-                    minimum_grade = 0,
-                    variations = {
-                    male = {
-                        bags_1 = 0, bags_2 = 0,
-                        tshirt_1 = 15, tshirt_2 = 0,
-                        torso_1 = 118, torso_2 = 6,
-                        arms = 86,
-                        pants_1 = 28, pants_2 = 8,
-                        shoes_1 = 51, shoes_2 = 0,
-                        mask_1 = 0, mask_2 = 0,
-                        bproof_1 = 0, bproof_2 = 0,
-                        helmet_1 = -1, helmet_2 = 0,
-                        chain_1 = 0, chain_2 = 0,
-                        decals_1 = 0, decals_2 = 0,
-                    },
-                    female = {
-                        bags_1 = 0, bags_2 = 0,
-                        tshirt_1 = 15, tshirt_2 = 0,
-                        torso_1 = 18, torso_2 = 6,
-                        arms = 101,
-                        pants_1 = 23, pants_2 = 0,
-                        shoes_1 = 74, shoes_2 = 1,
-                        mask_1 = 0, mask_2 = 0,
-                        bproof_1 = 0, bproof_2 = 0,
-                        helmet_1 = -1, helmet_2 = 0,
-                        chain_1 = 0, chain_2 = 0,
-                        decals_1 = 0, decals_2 = 0
-                    }
-                },
-                onEquip = function()
-                end
-            },
-                [1] = {
-                    minimum_grade = 0,
-                    label = "Tenue Médecin",
-                    variations = {
-                    male = {
-                        tshirt_1 = 15,  tshirt_2 = 0,
-                        torso_1 = 118,   torso_2 = 4,
-                        decals_1 = 0,   decals_2 = 0,
-                        arms = 86,
-                        pants_1 = 28,   pants_2 = 8,
-                        shoes_1 = 40,   shoes_2 = 9,
-                        helmet_1 = -1,  helmet_2 = 0,
-                        chain_1 = 30,    chain_2 = 2,
-                        ears_1 = -1,     ears_2 = 0
-                    },
-                    female = {
-                        tshirt_1 = 15,  tshirt_2 = 0,
-                        torso_1 = 18,   torso_2 = 4,
-                        decals_1 = 0,   decals_2 = 0,
-                        arms = 101,
-                        pants_1 = 23,   pants_2 = 1,
-                        shoes_1 = 74,   shoes_2 = 1,
-                        helmet_1 = -1,  helmet_2 = 0,
-                        chain_1 = 96,    chain_2 = 0,
-                        ears_1 = -1,     ears_2 = 0
-                    }
-                },
-                onEquip = function()
-                end
-            }
         },
+        grades = {
+            -- @label = Le nom affiché de la tenue de grade
+            -- @male = Les composants skinchanger pour les hommes
+            -- @female = Les composants skinchanger pour les femmes
+            [0] = {
+                label = "Tenue d'Ambulancier",
+                minimum_grade = 0,
+                variations = {
+                male = {
+                    bags_1 = 0, bags_2 = 0,
+                    tshirt_1 = 15, tshirt_2 = 0,
+                    torso_1 = 118, torso_2 = 6,
+                    arms = 86,
+                    pants_1 = 28, pants_2 = 8,
+                    shoes_1 = 51, shoes_2 = 0,
+                    mask_1 = 0, mask_2 = 0,
+                    bproof_1 = 0, bproof_2 = 0,
+                    helmet_1 = -1, helmet_2 = 0,
+                    chain_1 = 0, chain_2 = 0,
+                    decals_1 = 0, decals_2 = 0,
+                },
+                female = {
+                    bags_1 = 0, bags_2 = 0,
+                    tshirt_1 = 15, tshirt_2 = 0,
+                    torso_1 = 18, torso_2 = 6,
+                    arms = 101,
+                    pants_1 = 23, pants_2 = 0,
+                    shoes_1 = 74, shoes_2 = 1,
+                    mask_1 = 0, mask_2 = 0,
+                    bproof_1 = 0, bproof_2 = 0,
+                    helmet_1 = -1, helmet_2 = 0,
+                    chain_1 = 0, chain_2 = 0,
+                    decals_1 = 0, decals_2 = 0
+                }
+            },
+            onEquip = function()
+            end
+        },
+            [1] = {
+                minimum_grade = 0,
+                label = "Tenue Médecin",
+                variations = {
+                male = {
+                    tshirt_1 = 15,  tshirt_2 = 0,
+                    torso_1 = 118,   torso_2 = 4,
+                    decals_1 = 0,   decals_2 = 0,
+                    arms = 86,
+                    pants_1 = 28,   pants_2 = 8,
+                    shoes_1 = 40,   shoes_2 = 9,
+                    helmet_1 = -1,  helmet_2 = 0,
+                    chain_1 = 30,    chain_2 = 2,
+                    ears_1 = -1,     ears_2 = 0
+                },
+                female = {
+                    tshirt_1 = 15,  tshirt_2 = 0,
+                    torso_1 = 18,   torso_2 = 4,
+                    decals_1 = 0,   decals_2 = 0,
+                    arms = 101,
+                    pants_1 = 23,   pants_2 = 1,
+                    shoes_1 = 74,   shoes_2 = 1,
+                    helmet_1 = -1,  helmet_2 = 0,
+                    chain_1 = 96,    chain_2 = 0,
+                    ears_1 = -1,     ears_2 = 0
+                }
+            },
+            onEquip = function()
+            end
+        }
     }
 }
