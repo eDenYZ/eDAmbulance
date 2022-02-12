@@ -66,7 +66,7 @@ function VestiaireAmbulance()
               RageUI.Separator("↓ ~b~Tenues spéciales ~s~↓")
 			
               for _,infosspecial in pairs(AmbuCloak.clothes.specials) do
-                RageUI.Button(infosspecial.label, nil, {RightLabel = ">"}, ESX.PlayerData.job.grade >= infos.minimum_grade, {
+                RageUI.Button(infosspecial.label, nil, {RightLabel = ">"}, ESX.PlayerData.job.grade >= infosspecial.minimum_grade, {
                 onSelected = function()
                      applySkinSpecific(infosspecial)
                   end
@@ -74,7 +74,7 @@ function VestiaireAmbulance()
 
                 RageUI.Separator("↓ ~y~Tenues de service ~s~↓")
                 for _,infosgrade in pairs(AmbuCloak.clothes.grades) do
-                  RageUI.Button(infosgrade.label, nil, {RightLabel = ">"}, ESX.PlayerData.job.grade >= infos.minimum_grade, {
+                  RageUI.Button(infosgrade.label, nil, {RightLabel = ">"}, ESX.PlayerData.job.grade >= infosgrade.minimum_grade, {
                     onSelected = function()
                         applySkinSpecific(infosgrade)
                       end
