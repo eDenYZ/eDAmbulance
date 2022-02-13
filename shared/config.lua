@@ -79,7 +79,47 @@ Position = {
 }
 
 AmbuCloak = {
-	    clothes = {
+    clothes = {
+                specials = {
+                    [0] = {
+                        label = "Tenue Civil",
+                        minimum_grade = 0,
+                        variations = {male = {}, female = {}},
+                        onEquip = function()
+                            ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin) TriggerEvent('skinchanger:loadSkin', skin) end)
+                            SetPedArmour(PlayerPedId(), 0)
+                        end
+                    },
+                    [1] = {
+                        minimum_grade = 3,
+                        label = "Tenue de Directeur",
+                        variations = {
+                        male = {
+                            tshirt_1 = 15,  tshirt_2 = 0,
+                            torso_1 = 12,   torso_2 = 0,
+                            decals_1 = 0,   decals_2 = 0,
+                            arms = 86,
+                            pants_1 = 28,   pants_2 = 0,
+                            shoes_1 = 40,   shoes_2 = 9,
+                            helmet_1 = -1,  helmet_2 = 0,
+                            chain_1 = 30,    chain_2 = 2,
+                            ears_1 = -1,     ears_2 = 0
+                        },
+                        female = {
+                            tshirt_1 = 39,  tshirt_2 = 0,
+                            torso_1 = 90,   torso_2 = 2,
+                            decals_1 = 0,   decals_2 = 0,
+                            arms = 101,
+                            pants_1 = 23,   pants_2 = 0,
+                            shoes_1 = 74,   shoes_2 = 1,
+                            helmet_1 = -1,  helmet_2 = 0,
+                            chain_1 = 96,    chain_2 = 0,
+                            ears_1 = -1,     ears_2 = 0
+                        }
+                    },
+                    onEquip = function()  
+                    end
+                }, 
                 grades = {
                     -- @label = Le nom affiché de la tenue de grade
                     -- @male = Les composants skinchanger pour les hommes
@@ -148,47 +188,7 @@ AmbuCloak = {
                     onEquip = function()
                     end
                 },
-                specials = {
-                    [0] = {
-                        label = "Tenue Civil",
-                        minimum_grade = 0,
-                        variations = {male = {}, female = {}},
-                        onEquip = function()
-                            ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin) TriggerEvent('skinchanger:loadSkin', skin) end)
-                            SetPedArmour(PlayerPedId(), 0)
-                        end
-                    },
-                    [1] = {
-                        minimum_grade = 3,
-                        label = "Tenue de Directeur",
-                        variations = {
-                        male = {
-                            tshirt_1 = 15,  tshirt_2 = 0,
-                            torso_1 = 12,   torso_2 = 0,
-                            decals_1 = 0,   decals_2 = 0,
-                            arms = 86,
-                            pants_1 = 28,   pants_2 = 0,
-                            shoes_1 = 40,   shoes_2 = 9,
-                            helmet_1 = -1,  helmet_2 = 0,
-                            chain_1 = 30,    chain_2 = 2,
-                            ears_1 = -1,     ears_2 = 0
-                        },
-                        female = {
-                            tshirt_1 = 39,  tshirt_2 = 0,
-                            torso_1 = 90,   torso_2 = 2,
-                            decals_1 = 0,   decals_2 = 0,
-                            arms = 101,
-                            pants_1 = 23,   pants_2 = 0,
-                            shoes_1 = 74,   shoes_2 = 1,
-                            helmet_1 = -1,  helmet_2 = 0,
-                            chain_1 = 96,    chain_2 = 0,
-                            ears_1 = -1,     ears_2 = 0
-                        }
-                    },
-                    onEquip = function()  
-                    end
-                },
-            }, 
+            },
         },
     }
 }
