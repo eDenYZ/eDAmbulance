@@ -432,3 +432,44 @@ AddEventHandler('esx_ambulancejob:heal', function(healType, quiet)
 	end
 end)
 
+ 
+  RegisterNetEvent('ambulance:putInVehicle')
+  AddEventHandler('ambulance:putInVehicle', function()
+  
+    local playerPed = GetPlayerPed(-1)
+    local coords    = GetEntityCoords(playerPed)
+  
+    if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
+  
+      local vehicle = GetClosestVehicle(coords.x,  coords.y,  coords.z,  5.0,  0,  71)
+  
+      if DoesEntityExist(vehicle) then
+  
+        local maxSeats = GetVehicleMaxNumberOfPassengers(vehicle)
+        local freeSeat = nil
+  
+        for i=maxSeats - 1, 0, -1 do
+          if IsVehicleSeatFree(vehicle,  i) then
+            freeSeat = i
+            break
+          end
+        end
+  
+        if freeSeat ~= nil then
+          TaskWarpPedIntoVehicle(playerPed,  vehicle,  freeSeat)
+        end
+  
+      end
+  
+    end
+  
+  end)
+  
+  
+  RegisterNetEvent("ambulance:OutVehicle")
+  AddEventHandler("ambulance:OutVehicle", function()
+      TaskLeaveAnyVehicle(GetPlayerPed(-1), 0, 0)
+  end)
+  
+  
+
