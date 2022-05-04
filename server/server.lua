@@ -519,3 +519,12 @@ AddEventHandler('Appel:ambulance', function()
         end
     end
 end)
+
+RegisterNetEvent('esx_ambulancejob:heal')
+AddEventHandler('esx_ambulancejob:heal', function(target, type)
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	if xPlayer.job.name == 'ambulance' then
+		TriggerClientEvent('esx_ambulancejob:heal', target, type)
+	end
+end)
